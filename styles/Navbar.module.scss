@@ -1,0 +1,38 @@
+.nav {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+
+.nav a {
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+  color: bisque;
+  text-decoration: none;
+  padding: 10px 20px; /* Adjust padding as needed */
+  margin: 0 50px; /* Adjust margin as needed */
+}
+
+.nav a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: bisque;
+  transition: width 0.4s;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+.navbar_container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  background-color: transparent;
+}
