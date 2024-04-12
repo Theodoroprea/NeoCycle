@@ -1,0 +1,93 @@
+@import "variables";
+
+.parallaxContainer {
+  overflow: hidden;
+}
+
+.parallax {
+  height: 140vh;
+  width: 100%;
+  position: relative;
+}
+
+.parallax img {
+  position: absolute;
+  object-fit: cover;
+}
+
+.mountain4,
+.mountain3,
+.mountain2,
+.mountain1,
+.sky,
+.water {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.mountain1 {
+  z-index: 4;
+}
+
+.mountain2 {
+  z-index: 5;
+}
+
+.mountain3 {
+  z-index: 6;
+}
+
+.mountain4 {
+  z-index: 7;
+}
+
+.title {
+  position: absolute;
+  bottom: 65%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 4;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.title h1 {
+  font-family: "League Spartan", sans-serif;
+  color: $secondary-colour;
+  font-size: 10rem;
+  margin-bottom: 50px;
+}
+
+.title h1::after {
+  content: "";
+  position: absolute;
+  bottom: 25%; /* Adjust the position of the line */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 50%; /* Adjust the length of the line */
+  height: 3px; /* Adjust the thickness of the line */
+  background-color: #ffc145; /* Adjust the color of the line */
+}
+
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 80%,
+    #212317 100%
+  );
+  top: 0;
+  left: 0;
+  z-index: 4;
+}

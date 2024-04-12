@@ -10,7 +10,7 @@
 
 .animation,
 .animation_layer {
-  height: 300%;
+  height: 2000px;
 }
 
 .animation {
@@ -32,28 +32,28 @@
 }
 
 .sky {
-  background-image: url("../public/sky.png");
+  background-image: url("/sky.png");
   background-size: cover;
 }
 
 .mountain_one {
-  background-image: url("../public/mountain1.png");
+  background-image: url("/mtn1.png");
 
   background-size: cover;
 }
 
 .mountain_two {
-  background-image: url("/mountain2.png");
+  background-image: url("/mtn2.png");
   background-size: cover;
 }
 
 .mountain_three {
-  background-image: url("/mountain3.png");
+  background-image: url("/mtn3.png");
   background-size: cover;
 }
 
 .mountain_four {
-  background-image: url("/mountain4.png");
+  background-image: url("/mtn4.png");
   background-size: cover;
 }
 

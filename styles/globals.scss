@@ -1,0 +1,15 @@
+@import "variables";
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $primary-colour;
+  color: $secondary-colour;
+}

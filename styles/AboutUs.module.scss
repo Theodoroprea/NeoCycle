@@ -1,0 +1,26 @@
+@import "variables";
+
+.about {
+  color: $secondary-colour;
+  padding-bottom: 20%;
+  margin: 0 auto;
+  display: flex; /* or use 'display: grid;' for grid layout */
+  flex-direction: column; /* For flexbox, align items vertically */
+  align-items: center; /* For flexbox, centers items horizontally */
+  text-align: center; /* Aligns text inside the container horizontally */
+  // border: 2px solid $secondary-colour;
+  background-color: #42454923;
+  border-radius: 50px;
+  width: 80%;
+}
+
+.about h2 {
+  color: $secondary-colour;
+  font-size: 4rem;
+  margin-top: 75px;
+}
+
+.about p {
+  margin-top: 25px;
+  width: 50%;
+}
