@@ -6,7 +6,7 @@ const About = () => {
       <h2>What is NeoCycle?</h2>
       <p className={styles.description}>
         Neocycle is a net zero company dedicated to ensuring no wetsuit ends up
-        in the landfill. we strive to come up with creative and innovative ways
+        in the landfill. We strive to come up with creative and innovative ways
         to up-cycle the neoprene into products that contribute to more fun in
         the sun. We believe that the neoprene from old wetsuits is still a
         useful material for various products and we plan to capitalize on those
