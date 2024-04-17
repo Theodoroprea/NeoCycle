@@ -10,7 +10,7 @@ import {
   TextField,
 } from "@mui/material";
 import { useState } from "react";
-import styles from "@/styles/Home/ContactUs.module.scss";
+import styles from "@/styles/ContactUs.module.scss";
 import CheckIcon from "@mui/icons-material/Check";
 import { useFormik } from "formik";
 import * as yup from "yup";

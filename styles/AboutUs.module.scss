@@ -2,25 +2,140 @@
 
 .about {
   color: $secondary-colour;
-  padding-bottom: 20%;
   margin: 0 auto;
   display: flex; /* or use 'display: grid;' for grid layout */
   flex-direction: column; /* For flexbox, align items vertically */
   align-items: center; /* For flexbox, centers items horizontally */
   text-align: center; /* Aligns text inside the container horizontally */
-  // border: 2px solid $secondary-colour;
   background-color: #42454923;
   border-radius: 50px;
   width: 80%;
+  min-height: min-content;
 }
 
 .about h2 {
   color: $secondary-colour;
   font-size: 4rem;
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
-.about p {
-  margin-top: 25px;
-  width: 50%;
+.description {
+  margin-top: 50px;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; /* Centers items horizontally */
+  text-align: center; /* Centers text horizontally */
+  margin-top: 0px;
+}
+
+.teamMembers {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transition: all 0.4s ease-in-out;
+}
+
+.teamMembers:hover .container:not(:hover) {
+  filter: grayscale(50%);
+  opacity: 0.75;
+  transform: scale(0.75);
+}
+
+.teamMember {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 30px;
+  background-color: rgb(237, 169, 87);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text horizontally */
+  flex-direction: column;
+  box-shadow: 0 0 22px rgba(77, 81, 85, 0.917);
+  transition: all 0.4s ease-in-out;
+}
+
+.container:hover .teamMember {
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  box-shadow: none;
+  padding: 0;
+
+  img {
+    width: 75%;
+    transform: translateY(-50px);
+  }
+}
+
+.container:hover .memberInfo {
+  bottom: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  color: #282b30;
+}
+
+.memberInfo {
+  transition: all 0.4s ease-in-out; /* Transition properties for .memberInfo */
+  transition-delay: 0.1s;
+
+  h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+}
+
+.teamMember img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s ease-in-out;
+}
+
+.container:not(:hover) .memberInfo:not(:hover) {
+  h4 {
+    color: #282b30;
+    opacity: 0;
+    display: none;
+  }
+
+  p {
+    color: #282b30;
+    opacity: 0;
+    display: none;
+  }
+}
+
+.img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
 }
