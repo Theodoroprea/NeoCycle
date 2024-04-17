@@ -4,9 +4,9 @@ const Navbar = () => {
   return (
     <div className={styles.navbar_container}>
       <nav className={styles.nav}>
-        <a href="#">About</a>
+        <a href="#about">About</a>
         <a href="#">Products</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   );

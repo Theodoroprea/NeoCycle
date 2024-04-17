@@ -12,6 +12,10 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
         />
+        <link
+          href="https://fonts.cdnfonts.com/css/baron-neue"
+          rel="stylesheet"
+        ></link>
       </Head>
       <body>
         <Main />

@@ -45,6 +45,17 @@
 }
 
 .title {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.container {
   position: absolute;
   bottom: 65%;
   left: 50%;
@@ -58,17 +69,16 @@
   opacity: 1;
 }
 
-.title h1 {
-  font-family: "League Spartan", sans-serif;
+.container h1 {
+  font-family: "Baron Neue", sans-serif;
   color: $secondary-colour;
   font-size: 10rem;
-  margin-bottom: 50px;
 }
 
-.title h1::after {
+.container h1::after {
   content: "";
   position: absolute;
-  bottom: 25%; /* Adjust the position of the line */
+  bottom: 0.5%; /* Adjust the position of the line */
   left: 0;
   right: 0;
   margin: 0 auto;

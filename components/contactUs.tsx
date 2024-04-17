@@ -59,7 +59,7 @@ const ContactUs = () => {
   });
 
   return (
-    <div className={styles.cardWrapper}>
+    <div id="contact" className={styles.cardWrapper}>
       <Card variant="outlined" className={styles.card}>
         <CardContent>
           <Stack className={styles.outerFormStack} direction="row" spacing={2}>

@@ -13,7 +13,7 @@ function Parallax() {
   const mountain1 = useRef(null);
   const sky = useRef(null);
   const water = useRef(null);
-  const title = useRef(null);
+  const container = useRef(null);
   const grad = useRef(null);
   // const nav = useRef(null);
 
@@ -80,9 +80,9 @@ function Parallax() {
         0
       );
       tl.to(
-        title.current,
+        container.current,
         {
-          y: "+450%",
+          y: "+350%",
           opacity: 0,
         },
         0
@@ -102,8 +102,11 @@ function Parallax() {
         <div ref={grad} className={styles.gradient} />
         <img ref={water} className={styles.water} src="/water.png" />
       </div>
-      <div ref={title} className={styles.title}>
-        <h1>NeoCycle</h1>
+      <div ref={container} className={styles.container}>
+        <div className={styles.title}>
+          <h1>NeO</h1>
+          <h1>Cycle</h1>
+        </div>
         <Navbar />
       </div>
     </div>

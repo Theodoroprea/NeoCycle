@@ -27,6 +27,7 @@
 
 .team {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-around;
   align-items: center; /* Centers items horizontally */
@@ -40,12 +41,14 @@
   height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 25px;
 }
 
 .container {
+  min-width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,11 +63,16 @@
   transform: scale(0.75);
 }
 
+.grayscale {
+  filter: grayscale(50%);
+  opacity: 0.75;
+  transform: scale(0.75);
+}
+
 .teamMember {
   position: relative;
   width: 200px;
   height: 200px;
-  margin: 0 30px;
   background-color: rgb(237, 169, 87);
   border-radius: 50%;
   padding: 10px;

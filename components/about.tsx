@@ -1,8 +1,9 @@
+import { useEffect, useRef } from "react";
 import styles from "../styles/AboutUs.module.scss";
 
 const About = () => {
   return (
-    <div className={styles.about}>
+    <div id="about" className={styles.about}>
       <h2>What is NeoCycle?</h2>
       <p className={styles.description}>
         Neocycle is a net zero company dedicated to ensuring no wetsuit ends up
