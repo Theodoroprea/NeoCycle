@@ -1,5 +1,4 @@
 "use client";
-import styles from "../styles/Images.module.scss";
 import { useEffect, useState } from "react";
 import About from "@/components/about";
 import Parallax from "@/components/parallax";
