@@ -14,7 +14,7 @@ const Footer = () => {
       <div className={styles.footerContainer}>
         <div className={styles.socialIcons}>
           <li>
-            <a href="">
+            <a href="https://www.instagram.com/neocycl3/">
               <InstagramIcon fontSize="large" style={{ color: "#ffc145" }} />
             </a>
           </li>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className={styles.footerBottom}>
           <p>
-            Copyright &copy;2024 {" | "}Designed by{" "}
+            {/* Copyright &copy;2024 {" | "}*/}Designed by{" "}
             <span className={styles.designer}>Theodor</span>
           </p>
         </div>

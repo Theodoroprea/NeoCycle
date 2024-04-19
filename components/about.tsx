@@ -21,30 +21,44 @@ const About = () => {
             <div className={styles.teamMember}>
               <img className={styles.img} src="/Waibs.png" alt="Angus" />
             </div>
-            <div className={styles.memberInfo}>
+            <div className={styles.memberInfo1}>
               <h3>Matthew</h3>
               <h4>CEO</h4>
-              <p>cant see his peen, crazy bush</p>
+              <p>
+                Born and raised on the west coast of British Columbia, the ocean
+                has always been a haven for me. Surfing and fishing has had a
+                strong influence on my passion for sustainability. <br />
+                <br /> Engaging with the ocean and the life in and around it
+                motivates me to preserve everything that makes this coastline
+                what it is.
+              </p>
             </div>
           </div>
           <div className={styles.container}>
             <div className={styles.teamMember}>
               <img className={styles.img} src="/Angus.png" alt="Angus" />
             </div>
-            <div className={styles.memberInfo}>
+            <div className={styles.memberInfo2}>
               <h3>Angus</h3>
-              <h4>CFO</h4>
-              <p>his mumi gey</p>
+              <h4>CEO</h4>
+              <p></p>
             </div>
           </div>
           <div className={styles.container}>
             <div className={styles.teamMember}>
               <img className={styles.img} src="/Theo.png" alt="Angus" />
             </div>
-            <div className={styles.memberInfo}>
+            <div className={styles.memberInfo3}>
               <h3>Theodor</h3>
               <h4>CTO</h4>
-              <p>cool kid</p>
+              <p>
+                Born on the west coast of British Columbia but raised in Paris,
+                France, I returned to BC at 16, where the rare and diverse
+                ecosystems of Vancouver Island ignited my passion for the ocean
+                and its surrounding nature. <br /> <br /> It was amidst these
+                landscapes that I found not only inspiration but also a sense of
+                peace, sparked by eye-opening adventures with friends.
+              </p>
             </div>
           </div>
         </div>

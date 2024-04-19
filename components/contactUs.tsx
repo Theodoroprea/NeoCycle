@@ -259,7 +259,7 @@ const ContactUs = () => {
                 InputLabelProps={{
                   style: {
                     color:
-                      focused === "email" || formik.values.email !== ""
+                      focused === "quantity" || formik.values.quantity !== ""
                         ? "rgb(234, 148, 42)"
                         : "#282b30",
                   },

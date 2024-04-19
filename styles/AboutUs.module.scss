@@ -3,6 +3,7 @@
 .about {
   color: $secondary-colour;
   margin: 0 auto;
+  margin-bottom: 75px;
   display: flex; /* or use 'display: grid;' for grid layout */
   flex-direction: column; /* For flexbox, align items vertically */
   align-items: center; /* For flexbox, centers items horizontally */
@@ -16,7 +17,7 @@
 .about h2 {
   color: $secondary-colour;
   font-size: 4rem;
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .description {
@@ -80,7 +81,7 @@
 
 .container:hover .teamMember {
   border-radius: 10px;
-  height: 400px;
+  height: 525px;
   width: 400px;
   box-shadow: none;
   padding: 0;
@@ -91,25 +92,43 @@
   }
 }
 
-.container:hover .memberInfo {
+.container:hover .memberInfo1 {
   bottom: 0;
+  width: 390px;
   position: absolute;
-  transform: translateY(-50%);
   color: #282b30;
+  transform: translateY(-20%);
 }
 
-.memberInfo {
-  transition: all 0.4s ease-in-out; /* Transition properties for .memberInfo */
-  transition-delay: 0.1s;
+.container:hover .memberInfo2 {
+  bottom: 0;
+  width: 390px;
+  position: absolute;
+  color: #282b30;
+  transform: translateY(-5%);
+}
+
+.container:hover .memberInfo3 {
+  bottom: 0;
+  width: 390px;
+  position: absolute;
+  color: #282b30;
+  transform: translateY(-3%);
+}
+
+.memberInfo1,
+.memberInfo2,
+.memberInfo3 {
+  transition: all 0.5s ease-in-out; /* Transition properties for .memberInfo */
+  transition-delay: 0.25s;
 
   h3 {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 1.5rem;
     font-weight: 600;
   }
 
   h4 {
-    margin-top: 15px;
     font-weight: 500;
     font-size: 1.5rem;
   }
@@ -122,7 +141,9 @@
   transition: all 0.4s ease-in-out;
 }
 
-.container:not(:hover) .memberInfo:not(:hover) {
+.container:not(:hover) .memberInfo1:not(:hover),
+.container:not(:hover) .memberInfo2:not(:hover),
+.container:not(:hover) .memberInfo3:not(:hover) {
   h4 {
     color: #282b30;
     opacity: 0;
