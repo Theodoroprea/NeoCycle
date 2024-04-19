@@ -1,9 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
 import About from "@/components/about";
 import Parallax from "@/components/parallax";
 import ContactUs from "@/components/contactUs";
-const logo = "./logo.png";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -11,6 +10,7 @@ export default function Home() {
       <Parallax />
       <About />
       <ContactUs />
+      <Footer />
     </>
   );
 }
