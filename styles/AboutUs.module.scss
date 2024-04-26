@@ -1,5 +1,4 @@
 @import "variables";
-@import "breakpoints";
 
 .about {
   color: $secondary-colour;
@@ -16,14 +15,9 @@
 }
 
 .about h2 {
-  @include sm {
-    color: red;
-  }
-  @include xl {
-    color: $secondary-colour;
-    font-size: 4rem;
-    margin: 50px;
-  }
+  color: $secondary-colour;
+  font-size: 4rem;
+  margin: 50px;
 }
 
 .description {
