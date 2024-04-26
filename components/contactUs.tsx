@@ -107,8 +107,9 @@ const ContactUs = () => {
         <h2 className={styles.title}>Contact Us</h2>
         <div className={styles.contactStatementWrapper}>
           <p className={styles.description}>
-            We strive to do the best for our users. If you have any comments,
-            questions, or concerns, please don't hesitate to reach out to us.
+            If you would like to get in touch with our team or place an order,
+            please fill out the form below.
+            <br /> We will get back to you as soon as possible.
           </p>
         </div>
         <form className={styles.form} onSubmit={formik.handleSubmit}>

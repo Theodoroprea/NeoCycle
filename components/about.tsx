@@ -41,7 +41,15 @@ const About = () => {
             <div className={styles.memberInfo2}>
               <h3>Angus</h3>
               <h4>CEO</h4>
-              <p></p>
+              <p>
+                Living on Vancouver Island for years, I've become deeply
+                ingrained in its unique environment, from fixing pipes as a
+                plumber to chasing waves as a hobbyist surfer. <br /> <br />{" "}
+                Amid island life, I've become environmentally conscious. Fueled
+                by love for this place, I'm on a sustainability journey. Through
+                wetsuit recycling, I protect my home environment, one suit at a
+                time.
+              </p>
             </div>
           </div>
           <div className={styles.container}>
