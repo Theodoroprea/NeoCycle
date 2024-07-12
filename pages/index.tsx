@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <>
-      <Parallax />
+      <Parallax page={"home"} />
       <About />
       <ContactUs />
       <Footer />
