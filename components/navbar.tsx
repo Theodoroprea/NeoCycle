@@ -1,4 +1,5 @@
 import styles from "../styles/Navbar.module.scss";
+import Link from "next/link";
 
 interface NavbarProps {
   page: string;
@@ -10,14 +11,14 @@ const Navbar = (props: NavbarProps) => {
       return (
         <nav className={styles.nav}>
           <a href="#about">About</a>
-          <a href="/products">Products</a>
+          <Link href="/products">Products</Link>
           <a href="#contact">Contact</a>
         </nav>
       );
     } else if (props.page === "products") {
       return (
         <nav className={styles.nav}>
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
         </nav>
       );
     } else {
