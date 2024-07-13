@@ -115,6 +115,7 @@ const ContactUs = () => {
             direction="column"
             spacing={2}
             className={styles.innerFormStack}
+            alignItems="center"
           >
             {showError && (
               <Alert severity="error">
@@ -147,13 +148,13 @@ const ContactUs = () => {
                 },
               }}
               sx={{
+                width: "40%",
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "rgb(234, 148, 42)",
                   },
                 },
               }}
-              className={styles.exe}
             />
             <TextField
               label="Email"
@@ -296,6 +297,7 @@ const ContactUs = () => {
                 },
               }}
               sx={{
+                width: "60%",
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "rgb(234, 148, 42)",
