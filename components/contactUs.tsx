@@ -4,9 +4,7 @@ import {
   Alert,
   Button,
   CircularProgress,
-  InputLabel,
   MenuItem,
-  Select,
   Stack,
   TextField,
 } from "@mui/material";
@@ -104,7 +102,7 @@ const ContactUs = () => {
   return (
     <div id="contact" className={styles.cardWrapper}>
       <div className={styles.card}>
-        <h2 className={styles.title}>Contact Us</h2>
+        <h2>Contact Us</h2>
         <div className={styles.contactStatementWrapper}>
           <p className={styles.description}>
             If you would like to get in touch with our team or place an order,
@@ -149,13 +147,13 @@ const ContactUs = () => {
                 },
               }}
               sx={{
-                width: "40%",
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "rgb(234, 148, 42)",
                   },
                 },
               }}
+              className={styles.exe}
             />
             <TextField
               label="Email"

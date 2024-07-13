@@ -1,4 +1,5 @@
 @import "variables";
+@import "breakpoints";
 
 .cardWrapper {
   justify-content: center;
@@ -23,13 +24,46 @@
   h2 {
     color: $secondary-colour;
     font-size: 4rem;
-    margin-top: 50px;
+
+    @include respond-to("xs") {
+      font-size: 1.75rem;
+      margin-top: 50px;
+    }
+
+    @include respond-to("md") {
+      font-size: 3rem;
+      margin: 50px;
+    }
+
+    @include respond-to("lg") {
+      font-size: 4.5rem;
+      margin: 50px;
+    }
+
+    @include respond-to("xl") {
+      font-size: 5rem;
+      margin: 50px;
+    }
   }
 
   .description {
-    margin-top: 40px;
     width: 80%;
-    font-size: 1.5rem;
+
+    @include respond-to("xs") {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-top: 10%;
+    }
+
+    @include respond-to("md") {
+      font-size: 1.5rem;
+      margin-top: 3%;
+    }
+
+    @include respond-to("lg") {
+      font-size: 1.75rem;
+      margin-top: 2%;
+    }
   }
 }
 
