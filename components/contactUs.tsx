@@ -309,9 +309,6 @@ const ContactUs = () => {
               <Button
                 disabled={success || spinner}
                 variant="contained"
-                style={{
-                  width: "20%",
-                }}
                 sx={{
                   "&:hover": { backgroundColor: "#B87A00" },
                   backgroundColor: "#ffc145",
