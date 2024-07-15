@@ -17,28 +17,28 @@ const About = () => {
       <div className={styles.team}>
         <h2>Meet the team!</h2>
         <div className={styles.teamMembers}>
-          <div className={styles.container}>
-            <div className={styles.teamMember}>
-              <img className={styles.img} src="/Waibs.png" alt="Angus" />
+          <div className={styles.teamMember}>
+            <div className={styles.imgContainer}>
+              <img className={styles.img} src="/Waibs.png" alt="Waibs" />
             </div>
-            <div className={styles.memberInfo1}>
+            <div className={styles.memberInfo}>
               <h3>Matthew</h3>
               <h4>CEO</h4>
               <p>
                 Born and raised on the west coast of British Columbia, the ocean
                 has always been a haven for me. Surfing and fishing has had a
-                strong influence on my passion for sustainability. <br />
-                <br /> Engaging with the ocean and the life in and around it
-                motivates me to preserve everything that makes this coastline
+                strong influence on my passion for sustainability.
+                <br /> <br /> Engaging with the ocean and the life in and around
+                it motivates me to preserve everything that makes this coastline
                 what it is.
               </p>
             </div>
           </div>
-          <div className={styles.container}>
-            <div className={styles.teamMember}>
+          <div className={styles.teamMember}>
+            <div className={styles.imgContainer}>
               <img className={styles.img} src="/Angus.png" alt="Angus" />
             </div>
-            <div className={styles.memberInfo2}>
+            <div className={styles.memberInfo}>
               <h3>Angus</h3>
               <h4>CEO</h4>
               <p>
@@ -52,12 +52,12 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className={styles.container}>
-            <div className={styles.teamMember}>
-              <img className={styles.img} src="/Theo.png" alt="Angus" />
+          <div className={styles.teamMember}>
+            <div className={styles.imgContainer}>
+              <img className={styles.img} src="/Theo.png" alt="Theo" />
             </div>
-            <div className={styles.memberInfo3}>
-              <h3>Theodor</h3>
+            <div className={styles.memberInfo}>
+              <h3>Theo</h3>
               <h4>CTO</h4>
               <p>
                 Born on the west coast of British Columbia but raised in Paris,

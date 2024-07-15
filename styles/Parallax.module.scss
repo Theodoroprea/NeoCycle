@@ -1,4 +1,5 @@
 @import "variables";
+@import "breakpoints";
 
 .parallaxContainer {
   overflow: hidden;
@@ -53,6 +54,40 @@
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: 10px;
+
+  h1 {
+    font-family: "Baron Neue", sans-serif;
+    color: $secondary-colour;
+    font-size: 10rem;
+
+    @include respond-to("xs") {
+      font-size: 5rem;
+    }
+
+    @include respond-to("sm") {
+      font-size: 7rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 8.5rem;
+    }
+
+    @include respond-to("lg") {
+      font-size: 10rem;
+    }
+  }
+
+  h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5%; /* Adjust the position of the line */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%; /* Adjust the length of the line */
+    height: 3px; /* Adjust the thickness of the line */
+    background-color: #ffc145; /* Adjust the color of the line */
+  }
 }
 
 .container {
@@ -67,24 +102,18 @@
   justify-content: space-between;
   flex-direction: column;
   opacity: 1;
-}
 
-.container h1 {
-  font-family: "Baron Neue", sans-serif;
-  color: $secondary-colour;
-  font-size: 10rem;
-}
+  @include respond-to("xs") {
+    bottom: 50%;
+  }
 
-.container h1::after {
-  content: "";
-  position: absolute;
-  bottom: 0.5%; /* Adjust the position of the line */
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 50%; /* Adjust the length of the line */
-  height: 3px; /* Adjust the thickness of the line */
-  background-color: #ffc145; /* Adjust the color of the line */
+  @include respond-to("md") {
+    bottom: 55%;
+  }
+
+  @include respond-to("xl") {
+    bottom: 50%;
+  }
 }
 
 .gradient {
