@@ -4,9 +4,7 @@ import {
   Alert,
   Button,
   CircularProgress,
-  InputLabel,
   MenuItem,
-  Select,
   Stack,
   TextField,
 } from "@mui/material";
@@ -104,7 +102,7 @@ const ContactUs = () => {
   return (
     <div id="contact" className={styles.cardWrapper}>
       <div className={styles.card}>
-        <h2 className={styles.title}>Contact Us</h2>
+        <h2>Contact Us</h2>
         <div className={styles.contactStatementWrapper}>
           <p className={styles.description}>
             If you would like to get in touch with our team or place an order,
@@ -117,6 +115,7 @@ const ContactUs = () => {
             direction="column"
             spacing={2}
             className={styles.innerFormStack}
+            alignItems="center"
           >
             {showError && (
               <Alert severity="error">
@@ -298,6 +297,7 @@ const ContactUs = () => {
                 },
               }}
               sx={{
+                width: "60%",
                 "& .MuiOutlinedInput-root": {
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                     borderColor: "rgb(234, 148, 42)",
@@ -309,9 +309,6 @@ const ContactUs = () => {
               <Button
                 disabled={success || spinner}
                 variant="contained"
-                style={{
-                  width: "20%",
-                }}
                 sx={{
                   "&:hover": { backgroundColor: "#B87A00" },
                   backgroundColor: "#ffc145",
