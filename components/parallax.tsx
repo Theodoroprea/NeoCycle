@@ -100,8 +100,8 @@ export default function Parallax(props: ParallaxProps) {
       return (
         <div ref={container} className={styles.container}>
           <div className={styles.title}>
-            <h1>NeO</h1>
-            <h1>Cycle</h1>
+            <h1 className={styles.neocycle}>NeO</h1>
+            <h1 className={styles.neocycle}>Cycle</h1>
           </div>
           <Navbar page={props.page} />
         </div>
@@ -110,7 +110,7 @@ export default function Parallax(props: ParallaxProps) {
       return (
         <div ref={container} className={styles.container}>
           <div className={styles.title}>
-            <h1>PrOducts</h1>
+            <h1 className={styles.products}>PrOducts</h1>
           </div>
           <Navbar page={props.page} />
         </div>
