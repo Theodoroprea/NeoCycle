@@ -25,13 +25,13 @@
   width: 80%;
 
   @include respond-to("xs") {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     line-height: 1.5;
     margin-top: 10%;
   }
 
   @include respond-to("md") {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-top: 3%;
   }
 
@@ -49,9 +49,16 @@
 }
 
 .products_grid {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 10px; /* Add space between items */
-  width: 95%; /* Ensure grid takes full width of container */
+  display: grid;
+  gap: 10px;
+  width: 95%;
   margin-bottom: 20px;
+
+  @include respond-to("xs") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to("lg") {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
