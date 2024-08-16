@@ -55,7 +55,7 @@
   flex-direction: column;
   margin-bottom: 10px;
 
-  h1 {
+  .neocycle {
     font-family: "Baron Neue", sans-serif;
     color: $secondary-colour;
     font-size: 10rem;
@@ -66,6 +66,26 @@
 
     @include respond-to("sm") {
       font-size: 7rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 8.5rem;
+    }
+
+    @include respond-to("lg") {
+      font-size: 10rem;
+    }
+  }
+
+  .products {
+    font-family: "Baron Neue", sans-serif;
+    color: $secondary-colour;
+    @include respond-to("xs") {
+      font-size: 4.5rem;
+    }
+
+    @include respond-to("sm") {
+      font-size: 5rem;
     }
 
     @include respond-to("md") {

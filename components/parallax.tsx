@@ -4,7 +4,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "../styles/Parallax.module.scss";
 import Navbar from "./navbar";
 
-function Parallax() {
+interface ParallaxProps {
+  page: string;
+}
+
+export default function Parallax(props: ParallaxProps) {
   const [background, setBackground] = useState(30);
   const parallaxRef = useRef(null);
   const mountain4 = useRef(null);
@@ -91,6 +95,36 @@ function Parallax() {
     });
   });
 
+  const ConditionalTitleComponent = () => {
+    if (props.page === "home") {
+      return (
+        <div ref={container} className={styles.container}>
+          <div className={styles.title}>
+            <h1 className={styles.neocycle}>NeO</h1>
+            <h1 className={styles.neocycle}>Cycle</h1>
+          </div>
+          <Navbar page={props.page} />
+        </div>
+      );
+    } else if (props.page === "products") {
+      return (
+        <div ref={container} className={styles.container}>
+          <div className={styles.title}>
+            <h1 className={styles.products}>PrOducts</h1>
+          </div>
+          <Navbar page={props.page} />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>Page Not Found</h1>
+          <p>We couldn't find the page you're looking for.</p>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className={styles.parallaxContainer}>
       <div ref={parallaxRef} className={styles.parallax}>
@@ -102,15 +136,7 @@ function Parallax() {
         <div ref={grad} className={styles.gradient} />
         <img ref={water} className={styles.water} src="/water.png" />
       </div>
-      <div ref={container} className={styles.container}>
-        <div className={styles.title}>
-          <h1>NeO</h1>
-          <h1>Cycle</h1>
-        </div>
-        <Navbar />
-      </div>
+      <ConditionalTitleComponent />
     </div>
   );
 }
-
-export default Parallax;
