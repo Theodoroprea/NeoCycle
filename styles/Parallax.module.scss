@@ -77,26 +77,6 @@
     }
   }
 
-  .products {
-    font-family: "Baron Neue", sans-serif;
-    color: $secondary-colour;
-    @include respond-to("xs") {
-      font-size: 4.5rem;
-    }
-
-    @include respond-to("sm") {
-      font-size: 5rem;
-    }
-
-    @include respond-to("md") {
-      font-size: 8.5rem;
-    }
-
-    @include respond-to("lg") {
-      font-size: 10rem;
-    }
-  }
-
   h1::after {
     content: "";
     position: absolute;

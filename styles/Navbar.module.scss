@@ -59,9 +59,16 @@
   width: 100%;
 }
 
-.navbar_container {
+.navbar_container_home {
   width: 100%;
-  margin-top: 2.5%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  background-color: transparent;
+}
+
+.navbar_container_products {
+  width: 100%;
   display: flex;
   justify-content: center; /* Center horizontally */
   background-color: transparent;

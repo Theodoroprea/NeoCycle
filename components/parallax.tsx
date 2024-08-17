@@ -106,15 +106,6 @@ export default function Parallax(props: ParallaxProps) {
           <Navbar page={props.page} />
         </div>
       );
-    } else if (props.page === "products") {
-      return (
-        <div ref={container} className={styles.container}>
-          <div className={styles.title}>
-            <h1 className={styles.products}>PrOducts</h1>
-          </div>
-          <Navbar page={props.page} />
-        </div>
-      );
     } else {
       return (
         <div>
