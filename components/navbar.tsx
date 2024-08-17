@@ -9,17 +9,21 @@ const Navbar = (props: NavbarProps) => {
   const ConditionalNavbarComponent = () => {
     if (props.page === "home") {
       return (
-        <nav className={styles.nav}>
-          <a href="#about">About</a>
-          <Link href="/products">Products</Link>
-          <a href="#contact">Contact</a>
-        </nav>
+        <div className={styles.navbar_container_home}>
+          <nav className={styles.nav}>
+            <a href="#about">About</a>
+            <Link href="/products">Products</Link>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
       );
     } else if (props.page === "products") {
       return (
-        <nav className={styles.nav}>
-          <Link href="/">Home</Link>
-        </nav>
+        <div className={styles.navbar_container_products}>
+          <nav className={styles.nav}>
+            <Link href="/">Home</Link>
+          </nav>
+        </div>
       );
     } else {
       return (
@@ -31,11 +35,7 @@ const Navbar = (props: NavbarProps) => {
     }
   };
 
-  return (
-    <div className={styles.navbar_container}>
-      <ConditionalNavbarComponent />
-    </div>
-  );
+  return <ConditionalNavbarComponent />;
 };
 
 export default Navbar;

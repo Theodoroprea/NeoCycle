@@ -1,13 +1,83 @@
 @import "variables";
 @import "breakpoints";
 
+.page_background {
+  background-image: url("../public/cave.jpg");
+  background-size: cover;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  width: 100%;
+  height: 500px;
+
+  @include respond-to("xs") {
+    bottom: 50%;
+  }
+
+  @include respond-to("md") {
+    bottom: 55%;
+  }
+
+  @include respond-to("xl") {
+    bottom: 50%;
+  }
+
+  h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0.5%; /* Adjust the position of the line */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%; /* Adjust the length of the line */
+    height: 3px; /* Adjust the thickness of the line */
+    background-color: #ffc145; /* Adjust the color of the line */
+  }
+}
+
+.title {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .products_title {
+    font-family: "Baron Neue", sans-serif;
+    color: $secondary-colour;
+    @include respond-to("xs") {
+      font-size: 4.5rem;
+    }
+
+    @include respond-to("sm") {
+      font-size: 5rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 8.5rem;
+    }
+
+    @include respond-to("lg") {
+      font-size: 10rem;
+    }
+  }
+}
+
 .products_container {
   margin: 0 auto;
   margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #42454923;
+  background-color: #212317d0;
   border-radius: 10px;
   width: 98%;
   height: 100%;
