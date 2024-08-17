@@ -7,7 +7,7 @@ import styles from "../styles/Products.module.scss";
 export default function ProductsPage() {
   return (
     <div className={styles.page_background}>
-      <div className={styles.container}>
+      <div className={styles.page_container}>
         <div className={styles.title}>
           <h1 className={styles.products_title}>PrOducts</h1>
         </div>

@@ -10,7 +10,7 @@
   height: 100vh;
 }
 
-.container {
+.page_container {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -87,6 +87,7 @@
   background-color: #373429a2;
   border-radius: 10px;
   width: 98%;
+  min-height: 100%;
 }
 
 .description_container {
