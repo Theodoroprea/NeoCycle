@@ -1,7 +1,6 @@
 import { CartContext } from "@/context/cartContext";
 import { Button } from "@mui/material";
 import { useContext } from "react";
-import styles from "../styles/CartModal.module.scss";
 
 interface cartProductsProps {
   id: string;
@@ -20,14 +19,9 @@ export default function CartProduct(props: cartProductsProps) {
   return (
     <>
       <h3>{name}</h3>
-      <p>{quantity} item(s)</p>
+      <p>{quantity} items</p>
       <p>${(quantity * price).toFixed(2)}</p>
-      <Button
-        className={styles.purchaseButton}
-        onClick={() => cart.deleteFromCart(id)}
-      >
-        Remove
-      </Button>
+      <Button onClick={() => cart.deleteFromCart(id)}>Remove</Button>
       <hr></hr>
     </>
   );

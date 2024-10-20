@@ -3,111 +3,33 @@
 
 .modalText {
   h1 {
-    color: $primary-colour;
-
-    @include respond-to("xs") {
-      font-size: 1.2rem;
-    }
-
-    @include respond-to("md") {
-      font-size: 1.25rem;
-    }
-
-    @include respond-to("lg") {
-      font-size: 1.8rem;
-    }
-
-    @include respond-to("xl") {
-      font-size: 2.5rem;
-    }
+    color: red;
   }
 
   p {
-    color: #303120;
-
-    @include respond-to("xs") {
-      font-size: 1rem;
-    }
-
-    @include respond-to("md") {
-      font-size: 1.1rem;
-    }
-
-    @include respond-to("lg") {
-      font-size: 1.4rem;
-    }
-
-    @include respond-to("xl") {
-      font-size: 1.75rem;
-    }
+    color: blue;
   }
 
   h3 {
-    color: $primary-colour;
-    @include respond-to("xs") {
-      font-size: 1.05rem;
-    }
-
-    @include respond-to("md") {
-      font-size: 1.25rem;
-    }
-
-    @include respond-to("lg") {
-      font-size: 1.5rem;
-    }
-
-    @include respond-to("xl") {
-      font-size: 2rem;
-    }
-  }
-
-  hr {
-    margin-bottom: 10px;
+    color: green;
   }
 }
 
 .title {
   color: $primary-colour;
-  font-weight: 650;
-
   @include respond-to("xs") {
-    font-size: 1.45rem;
+    font-size: 1.75rem;
   }
 
   @include respond-to("md") {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   @include respond-to("lg") {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   @include respond-to("xl") {
-    font-size: 3rem;
-  }
-}
-
-.purchaseButton {
-  background-color: $secondary-colour;
-  margin-bottom: 10px;
-  color: $primary-colour;
-
-  &:hover {
-    background-color: $secondary-colour-light;
-  }
-
-  @include respond-to("xs") {
-    width: 40%;
-    font-size: 0.75rem;
-  }
-
-  @include respond-to("md") {
-    width: 20%;
-    font-size: 0.8rem;
-  }
-
-  @include respond-to("lg") {
-    width: 25%;
-    font-size: 1rem;
+    font-size: 5rem;
   }
 }

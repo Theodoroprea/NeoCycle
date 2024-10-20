@@ -15,7 +15,7 @@ import styles from "../styles/CartModal.module.scss";
 
 const CustomDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialog-paper": {
-    backgroundColor: "#FAF0E6",
+    backgroundColor: "#FFEBCD",
     borderRadius: "10px",
 
     "@media (max-width: 425px)": {
@@ -69,15 +69,15 @@ export default function CartModal(props: cartModalProps) {
                   price={currentProduct.price}
                 />
               ))}
-              <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
+              <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
 
               <Button
                 size="large"
                 variant="contained"
                 sx={{
-                  "&:hover": { backgroundColor: "#47A0FF" },
-                  backgroundColor: "#007bff",
-                  color: "#FAF0E6",
+                  "&:hover": { backgroundColor: "#B87A00" },
+                  backgroundColor: "#ffc145",
+                  color: "black",
                   boxShadow: "none",
                 }}
               >
