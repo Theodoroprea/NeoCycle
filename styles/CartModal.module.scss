@@ -1,0 +1,35 @@
+@import "variables";
+@import "breakpoints";
+
+.modalText {
+  h1 {
+    color: red;
+  }
+
+  p {
+    color: blue;
+  }
+
+  h3 {
+    color: green;
+  }
+}
+
+.title {
+  color: $primary-colour;
+  @include respond-to("xs") {
+    font-size: 1.75rem;
+  }
+
+  @include respond-to("md") {
+    font-size: 2rem;
+  }
+
+  @include respond-to("lg") {
+    font-size: 2.5rem;
+  }
+
+  @include respond-to("xl") {
+    font-size: 5rem;
+  }
+}
