@@ -35,7 +35,7 @@
   h1::after {
     content: "";
     position: absolute;
-    bottom: 0.5%; /* Adjust the position of the line */
+    bottom: -2%; /* Adjust the position of the line */
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -62,7 +62,7 @@
     }
 
     @include respond-to("sm") {
-      font-size: 5rem;
+      font-size: 4.5rem;
     }
 
     @include respond-to("md") {
@@ -70,76 +70,53 @@
     }
 
     @include respond-to("lg") {
-      font-size: 8rem;
+      font-size: 8.5rem;
     }
     @include respond-to("xl") {
-      font-size: 10rem;
+      font-size: 12rem;
+    }
+  }
+
+  .products_subtitle {
+    font-family: "Baron Neue", sans-serif;
+    color: $secondary-colour;
+
+    ::after {
+    }
+    @include respond-to("xs") {
+      font-size: 1.5rem;
+    }
+
+    @include respond-to("sm") {
+      font-size: 2rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 3rem;
+    }
+
+    @include respond-to("lg") {
+      font-size: 4rem;
+    }
+    @include respond-to("xl") {
+      font-size: 6rem;
     }
   }
 }
 
-.products_container {
+.success_paragraph_container {
   margin: 0 auto;
   margin-bottom: 150px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   background-color: #373429a2;
   border-radius: 10px;
   width: 98%;
-  min-height: 100%;
+  min-height: 50%;
 }
 
-.description_container {
-  margin-bottom: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 95%;
-}
-.description {
-  width: 80%;
-
-  @include respond-to("xs") {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-top: 10%;
-  }
-
-  @include respond-to("md") {
-    font-size: 1.1rem;
-    margin-top: 3%;
-  }
-
-  @include respond-to("lg") {
-    font-size: 1.25rem;
-    margin-top: 2%;
-  }
-}
-
-.search_input_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.btnContainer {
-  margin-top: 30px;
-}
-
-.products_grid {
-  display: grid;
-  gap: 10px;
-  width: 95%;
-  margin-bottom: 20px;
-
-  @include respond-to("xs") {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include respond-to("lg") {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.success_paragraph {
+  font-size: 1.5rem;
 }

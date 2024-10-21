@@ -50,8 +50,6 @@ const ContactUs = () => {
       Message: formik.values.message,
     };
 
-    console.log(data);
-
     await sendContactForm(data).then((res) => {
       if (res.status === 200) {
         setSuccess(true);

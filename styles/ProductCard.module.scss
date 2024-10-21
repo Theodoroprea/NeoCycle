@@ -1,9 +1,11 @@
 @import "variables";
 
 .productCard {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .imageContainer {
@@ -27,7 +29,6 @@
   padding: 12px 0 2px 0;
   text-align: left;
   font-size: 16px;
-  min-height: 185px;
 }
 
 .productName {
@@ -43,4 +44,16 @@
 .productDescription {
   font-size: 15px;
   color: $secondary-colour-light;
+}
+
+.btnContainer {
+  margin-top: auto;
+  left: 50%;
+  align-self: center;
+}
+
+.cartBtns {
+  display: flex;
+  flex-direction: column; /* Stack the children vertically */
+  align-items: center; /* Center the children horizontally */
 }

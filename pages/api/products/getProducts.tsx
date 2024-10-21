@@ -14,6 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       const price = prices.data.find((p) => p.product === product.id);
       return {
         id: product.id,
+        priceId: product.default_price,
         name: product.name,
         description: product.description,
         images: product.images,
