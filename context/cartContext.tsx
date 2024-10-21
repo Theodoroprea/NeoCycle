@@ -3,10 +3,17 @@ import { createContext, useEffect, useState } from "react";
 import { Product } from "@/lib/utils/types/Product";
 
 export const CartContext = createContext<{
-  products: { name: string; id: string; price: number; quantity: number }[];
+  products: {
+    name: string;
+    id: string;
+    priceId: string;
+    price: number;
+    quantity: number;
+  }[];
   getProductQuantity: (productId: string) => number;
   addProductToCart: (
     productId: string,
+    productPriceId: string,
     productName: string,
     productPrice: number
   ) => void;
@@ -38,7 +45,13 @@ export function CartProvider({ children }: any) {
   }, []);
 
   const [cartProducts, setCartProducts] = useState<
-    { name: string; id: string; price: number; quantity: number }[]
+    {
+      name: string;
+      id: string;
+      priceId: string;
+      price: number;
+      quantity: number;
+    }[]
   >([]);
 
   function getProductQuantity(productId: string) {
@@ -55,6 +68,7 @@ export function CartProvider({ children }: any) {
 
   function addProductToCart(
     productId: string,
+    productPriceId: string,
     productName: string,
     productPrice: number
   ) {
@@ -63,7 +77,13 @@ export function CartProvider({ children }: any) {
     if (quantity === 0) {
       setCartProducts([
         ...cartProducts,
-        { name: productName, id: productId, price: productPrice, quantity: 1 },
+        {
+          name: productName,
+          id: productId,
+          priceId: productPriceId,
+          price: productPrice,
+          quantity: 1,
+        },
       ]);
     } else {
       setCartProducts(

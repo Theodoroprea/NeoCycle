@@ -42,6 +42,7 @@ export default function ProductCard(props: ProductCardProps) {
           onClick={() =>
             cart.addProductToCart(
               props.product.id,
+              props.product.priceId,
               props.product.name,
               props.product.price
             )
@@ -70,6 +71,7 @@ export default function ProductCard(props: ProductCardProps) {
                 onClick={() =>
                   cart.addProductToCart(
                     props.product.id,
+                    props.product.priceId,
                     props.product.name,
                     props.product.price
                   )

@@ -12,6 +12,7 @@ import { useContext } from "react";
 import { CartContext } from "@/context/cartContext";
 import CartProduct from "./cartProduct";
 import styles from "../styles/CartModal.module.scss";
+import handleCheckoutClick from "@/pages/checkout";
 
 const CustomDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialog-paper": {
@@ -56,38 +57,39 @@ export default function CartModal(props: cartModalProps) {
       >
         <CloseIcon />
       </IconButton>
-      <DialogContent dividers>
-        <DialogContentText className={styles.modalText}>
-          {props.productsCount > 0 ? (
-            <>
-              {cart.products.map((currentProduct, idx) => (
-                <CartProduct
-                  key={idx}
-                  id={currentProduct.id}
-                  quantity={currentProduct.quantity}
-                  name={currentProduct.name}
-                  price={currentProduct.price}
-                />
-              ))}
-              <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
+      <DialogContent dividers className={styles.modalText}>
+        {props.productsCount > 0 ? (
+          <>
+            {cart.products.map((currentProduct, idx) => (
+              <CartProduct
+                key={idx}
+                id={currentProduct.id}
+                quantity={currentProduct.quantity}
+                name={currentProduct.name}
+                price={currentProduct.price}
+              />
+            ))}
+            <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
 
-              <Button
-                size="large"
-                variant="contained"
-                sx={{
-                  "&:hover": { backgroundColor: "#47A0FF" },
-                  backgroundColor: "#007bff",
-                  color: "#FAF0E6",
-                  boxShadow: "none",
-                }}
-              >
-                Proceed To checkout
-              </Button>
-            </>
-          ) : (
-            <h3> There are no items in your cart!</h3>
-          )}
-        </DialogContentText>
+            <Button
+              size="large"
+              variant="contained"
+              sx={{
+                "&:hover": { backgroundColor: "#47A0FF" },
+                backgroundColor: "#007bff",
+                color: "#FAF0E6",
+                boxShadow: "none",
+              }}
+              onClick={() => handleCheckoutClick(cart.products)}
+            >
+              Proceed To checkout
+            </Button>
+          </>
+        ) : (
+          <DialogContentText>
+            There are no items in your cart!
+          </DialogContentText>
+        )}
       </DialogContent>
     </CustomDialog>
   );
