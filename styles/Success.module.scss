@@ -1,0 +1,122 @@
+@import "variables";
+@import "breakpoints";
+
+.page_background {
+  background-image: linear-gradient(to bottom, transparent 90%, #212317 100%),
+    url("../public/cave.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.title_container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  width: 100%;
+  height: 500px;
+
+  @include respond-to("xs") {
+    bottom: 50%;
+  }
+
+  @include respond-to("md") {
+    bottom: 55%;
+  }
+
+  @include respond-to("xl") {
+    bottom: 50%;
+  }
+
+  h1::after {
+    content: "";
+    position: absolute;
+    bottom: -2%; /* Adjust the position of the line */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%; /* Adjust the length of the line */
+    height: 3px; /* Adjust the thickness of the line */
+    background-color: #ffc145; /* Adjust the color of the line */
+  }
+}
+
+.title {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .products_title {
+    font-family: "Baron Neue", sans-serif;
+    color: $secondary-colour;
+    @include respond-to("xs") {
+      font-size: 3.5rem;
+    }
+
+    @include respond-to("sm") {
+      font-size: 4.5rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 7rem;
+    }
+
+    @include respond-to("lg") {
+      font-size: 8.5rem;
+    }
+    @include respond-to("xl") {
+      font-size: 12rem;
+    }
+  }
+
+  .products_subtitle {
+    font-family: "Baron Neue", sans-serif;
+    color: $secondary-colour;
+
+    ::after {
+    }
+    @include respond-to("xs") {
+      font-size: 1.5rem;
+    }
+
+    @include respond-to("sm") {
+      font-size: 2rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 3rem;
+    }
+
+    @include respond-to("lg") {
+      font-size: 4rem;
+    }
+    @include respond-to("xl") {
+      font-size: 6rem;
+    }
+  }
+}
+
+.success_paragraph_container {
+  margin: 0 auto;
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #373429a2;
+  border-radius: 10px;
+  width: 98%;
+  min-height: 50%;
+}
+
+.success_paragraph {
+  font-size: 1.5rem;
+}
