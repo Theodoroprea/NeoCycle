@@ -20,6 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     mode: "payment",
     success_url: `${req.headers.origin}/success`,
     cancel_url: `${req.headers.origin}/products`,
+    automatic_tax: { enabled: true },
   });
   res.status(200).json({ sessionId: session.id });
 };
