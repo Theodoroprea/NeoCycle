@@ -12,7 +12,11 @@ import { useContext } from "react";
 import { CartContext } from "@/context/cartContext";
 import CartProduct from "./cartProduct";
 import styles from "../styles/CartModal.module.scss";
-import handleCheckoutClick from "@/pages/checkout";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string
+);
 
 const CustomDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialog-paper": {
@@ -42,6 +46,33 @@ interface cartModalProps {
 
 export default function CartModal(props: cartModalProps) {
   const cart = useContext(CartContext);
+
+  const handleCheckoutClick = async () => {
+    try {
+      const { sessionId } = await fetch("/api/checkoutSession/session", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ items: cart.products }),
+      }).then((res) => res.json());
+
+      const stripe = await stripePromise;
+
+      if (!stripe) {
+        throw new Error("Stripe.js failed to load.");
+      }
+
+      const { error } = await stripe.redirectToCheckout({ sessionId });
+
+      if (error) {
+        console.error("Stripe checkout error:", error);
+      }
+    } catch (err) {
+      console.error("Checkout error:", err);
+    }
+  };
+
   return (
     <CustomDialog open={props.showModal} onClose={props.handleClose}>
       <DialogTitle className={styles.title}>{"Shopping Cart"}</DialogTitle>
@@ -80,7 +111,7 @@ export default function CartModal(props: cartModalProps) {
                 color: "#FAF0E6",
                 boxShadow: "none",
               }}
-              onClick={() => handleCheckoutClick(cart.products)}
+              onClick={handleCheckoutClick}
             >
               Proceed To checkout
             </Button>
