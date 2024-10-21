@@ -93,7 +93,7 @@
   color: $primary-colour;
 
   &:hover {
-    background-color: $secondary-colour-light;
+    background-color: #b87a00;
   }
 
   @include respond-to("xs") {

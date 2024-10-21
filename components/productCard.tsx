@@ -34,8 +34,8 @@ export default function ProductCard(props: ProductCardProps) {
         <Button
           variant="contained"
           sx={{
-            "&:hover": { backgroundColor: "#B87A00" },
-            backgroundColor: "#ffc145",
+            "&:hover": { backgroundColor: "#51B8E1" },
+            backgroundColor: "#87ceeb",
             color: "black",
           }}
           data-testid="addToCartBtn"
@@ -85,7 +85,7 @@ export default function ProductCard(props: ProductCardProps) {
             <IconButton onClick={() => cart.deleteFromCart(props.product.id)}>
               <Delete
                 style={{
-                  color: "#ffc145",
+                  color: "#d9534f",
                 }}
               ></Delete>
             </IconButton>

@@ -71,8 +71,8 @@ export default function Products() {
             size="large"
             variant="contained"
             sx={{
-              "&:hover": { backgroundColor: "#B87A00" },
-              backgroundColor: "#ffc145",
+              "&:hover": { backgroundColor: "#51B8E1" },
+              backgroundColor: "#87ceeb",
               color: "black",
               boxShadow: "none",
             }}
@@ -84,11 +84,11 @@ export default function Products() {
         </div>
         <div className={styles.description_container}>
           <p className={styles.description}>
-            All of our products are made from wetsuits from surfers and surf
-            shops from all around Vancouver Island.
+            All of our products are made out of wetsuits from surfers and surf
+            shops located all around Vancouver Island.
             <br /> <br /> Rest assured, all of the wetsuits are properly
-            sanitized and cleaned before being repurposed into a Brew Suit and a
-            Change Buddy!
+            sanitized and cleaned before being repurposed into Brew Suits and
+            Change Mats!
           </p>
         </div>
         <div className={styles.products_grid}>
