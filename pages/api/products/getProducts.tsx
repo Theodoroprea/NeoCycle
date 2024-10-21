@@ -7,8 +7,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const products = await stripe.products.list();
-    const prices = await stripe.prices.list();
+    const products = await stripe.products.list({ active: true });
+    const prices = await stripe.prices.list({ active: true });
 
     const productData = products.data.map((product) => {
       const price = prices.data.find((p) => p.product === product.id);

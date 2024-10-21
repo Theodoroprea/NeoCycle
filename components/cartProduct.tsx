@@ -23,7 +23,7 @@ export default function CartProduct(props: cartProductsProps) {
       <p>{quantity} item(s)</p>
       <p>${(quantity * price).toFixed(2)}</p>
       <Button
-        className={styles.purchaseButton}
+        className={styles.removeBtn}
         onClick={() => cart.deleteFromCart(id)}
       >
         Remove

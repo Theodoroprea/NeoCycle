@@ -4,21 +4,22 @@
 .modalText {
   h1 {
     color: $primary-colour;
+    font-weight: 600;
 
     @include respond-to("xs") {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     @include respond-to("md") {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
 
     @include respond-to("lg") {
-      font-size: 1.8rem;
+      font-size: 1.25rem;
     }
 
     @include respond-to("xl") {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -26,7 +27,28 @@
     color: #303120;
 
     @include respond-to("xs") {
+      font-size: 0.75rem;
+    }
+
+    @include respond-to("md") {
+      font-size: 0.9rem;
+    }
+
+    @include respond-to("lg") {
       font-size: 1rem;
+    }
+
+    @include respond-to("xl") {
+      font-size: 1.1rem;
+    }
+  }
+
+  h3 {
+    color: $primary-colour;
+    font-weight: 600;
+
+    @include respond-to("xs") {
+      font-size: 0.9rem;
     }
 
     @include respond-to("md") {
@@ -34,30 +56,11 @@
     }
 
     @include respond-to("lg") {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     @include respond-to("xl") {
-      font-size: 1.75rem;
-    }
-  }
-
-  h3 {
-    color: $primary-colour;
-    @include respond-to("xs") {
-      font-size: 1.05rem;
-    }
-
-    @include respond-to("md") {
       font-size: 1.25rem;
-    }
-
-    @include respond-to("lg") {
-      font-size: 1.5rem;
-    }
-
-    @include respond-to("xl") {
-      font-size: 2rem;
     }
   }
 
@@ -71,19 +74,19 @@
   font-weight: 650;
 
   @include respond-to("xs") {
-    font-size: 1.45rem;
+    font-size: 1.25rem;
   }
 
   @include respond-to("md") {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   @include respond-to("lg") {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
   @include respond-to("xl") {
-    font-size: 3rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -109,5 +112,55 @@
   @include respond-to("lg") {
     width: 25%;
     font-size: 1rem;
+  }
+}
+
+.removeBtn {
+  background-color: #ddcfc1;
+  margin-bottom: 10px;
+  color: $primary-colour;
+
+  &:hover {
+    background-color: #b87a00;
+  }
+
+  @include respond-to("xs") {
+    width: 10%;
+    font-size: 0.65rem;
+  }
+
+  @include respond-to("md") {
+    width: 10%;
+    font-size: 0.65rem;
+  }
+
+  @include respond-to("lg") {
+    width: 15%;
+    font-size: 0.75rem;
+  }
+}
+
+.checkoutBtn {
+  color: $primary-colour;
+  background-color: #87ceeb;
+  box-shadow: none;
+
+  &:hover {
+    background-color: #51b8e1;
+  }
+
+  @include respond-to("xs") {
+    width: 80%;
+    font-size: 0.75rem;
+  }
+
+  @include respond-to("md") {
+    width: 45%;
+    font-size: 0.8rem;
+  }
+
+  @include respond-to("lg") {
+    width: 45%;
+    font-size: 0.9rem;
   }
 }

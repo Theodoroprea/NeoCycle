@@ -105,15 +105,10 @@ export default function CartModal(props: cartModalProps) {
             <Button
               size="large"
               variant="contained"
-              sx={{
-                "&:hover": { backgroundColor: "#47A0FF" },
-                backgroundColor: "#007bff",
-                color: "#FAF0E6",
-                boxShadow: "none",
-              }}
+              className={styles.checkoutBtn}
               onClick={handleCheckoutClick}
             >
-              Proceed To checkout
+              Proceed to checkout
             </Button>
           </>
         ) : (
