@@ -57,6 +57,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     cancel_url: `${req.headers.origin}/products`,
     automatic_tax: { enabled: true },
     shipping_address_collection: { allowed_countries: ["CA"] },
+    allow_promotion_codes: true, // Enables promo code field for customers
   });
   res.status(200).json({ sessionId: session.id });
 };
