@@ -86,9 +86,10 @@ export default function Products() {
           <p className={styles.description}>
             All of our products are made out of wetsuits from surfers and surf
             shops located all around Vancouver Island.
-            <br /> <br /> Rest assured, all of the wetsuits are properly
+            <br /> <br /> Rest assured, all of our wetsuits are properly
             sanitized and cleaned before being repurposed into Brew Suits and
             Change Mats!
+            <br /> <br /> <b>Enjoy free shipping on all orders over $125!</b>
           </p>
         </div>
         <div className={styles.products_grid}>
