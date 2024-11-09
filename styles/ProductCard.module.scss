@@ -10,7 +10,7 @@
 
 .imageContainer {
   width: 100%;
-  padding-top: 100%; /* This ensures the image container is a square */
+  padding: 100% 0 20% 20%;
   position: relative;
   overflow: hidden;
 }
@@ -28,7 +28,7 @@
   position: relative;
   padding: 12px 0 2px 0;
   text-align: left;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .productName {
@@ -42,7 +42,7 @@
 }
 
 .productDescription {
-  font-size: 15px;
+  font-size: 14px;
   color: $secondary-colour-light;
 }
 
