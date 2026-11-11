@@ -30,7 +30,7 @@ export default function ProductCard(props: ProductCardProps) {
         </p>
         <p className={styles.productDescription}>{props.product.description}</p>
       </div>
-      <div className={styles.btnContainer}>
+      {/* <div className={styles.btnContainer}>
         <Button
           variant="contained"
           sx={{
@@ -95,7 +95,7 @@ export default function ProductCard(props: ProductCardProps) {
         ) : (
           <></>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
